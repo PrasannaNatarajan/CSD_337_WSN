@@ -16,18 +16,28 @@ $ns color 3 Green
 set nf [open out.nam w]
 $ns namtrace-all $nf
 
+set f0 [open out0.tr w]
+set f1 [open out1.tr w]
+set f2 [open out2.tr w]
+
 #Define a 'finish' procedure
 
 proc finish {} {
-        global ns nf tracefile
+        global ns nf tracefile f0 f1 f2
         $ns flush-trace
         #Close the NAM trace file
         close $nf
         close $tracefile
+        close $f0
+        close $f1
+        close $f2
         #Execute NAM on the trace file
         exec nam out.nam &
+        #Call xgraph to display the results
+        exec xgraph out0.tr out1.tr out2.tr -geometry 800x400 &
         exit 0
 }
+
 
 #Create ten nodes
 set n0 [$ns node]
@@ -84,6 +94,10 @@ $ns attach-agent $n1 $sink
 $ns connect $tcp $sink
 $tcp set fid_ 2
 
+# attaching loss monitor
+set sink1 [new Agent/LossMonitor]
+$ns attach-agent $n1 $sink1
+
 #Setup a FTP over TCP connection
 set ftp [new Application/FTP]
 $ftp attach-agent $tcp
@@ -97,6 +111,9 @@ set null [new Agent/Null]
 $ns attach-agent $n2 $null
 $ns connect $udp $null
 $udp set fid_ 3
+# attaching loss monitor
+set null2 [new Agent/LossMonitor]
+$ns attach-agent $n2 $null2
 
 set udp1 [new Agent/UDP]
 $ns attach-agent $n8 $udp1
@@ -104,7 +121,10 @@ set null1 [new Agent/Null]
 $ns attach-agent $n0 $null1
 $ns connect $udp1 $null1
 $udp1 set fid_ 1
- 
+ # attaching loss monitor
+set null3 [new Agent/LossMonitor]
+$ns attach-agent $n0 $null3
+
 #Setup a CBR over UDP connection
 set cbr0 [new Application/Traffic/CBR]
 $cbr0 attach-agent $udp 
@@ -129,8 +149,32 @@ $cbr1 set random_ false
 set tracefile [open out.trace w]
 $ns trace-queue $n4 $n3 $tracefile
 
+proc record {} {
+        global sink1 null2 null3 f0 f1 f2
+        #Get an instance of the simulator
+        set ns [Simulator instance]
+        #Set the time after which the procedure should be called again
+        set time 0.5
+        #How many bytes have been received by the traffic sinks?
+        set bw0 [$sink1 set bytes_];
+        set bw1 [$null2 set bytes_];
+        set bw2 [$null3 set bytes_];
+        #Get the current time
+        set now [$ns now]
+        #Calculate the bandwidth (in MBit/s) and write it to the files
+        puts $f0 "$now [expr $bw0/$time*8/1000000]"
+        puts $f1 "$now [expr $bw1/$time*8/1000000]"
+        puts $f2 "$now [expr $bw2/$time*8/1000000]"
+        #Reset the bytes_ values on the traffic sinks
+        $sink1 set bytes_ 0
+        $null2 set bytes_ 0
+        $null3 set bytes_ 0
+        #Re-schedule the procedure
+        $ns at [expr $now+$time] "record"
+}
 
 #Schedule events for the CBR and FTP agents
+$ns at 0.0 "record"
 $ns at 0.5 "$cbr0 start"
 $ns at 1 "$cbr1 start"
 $ns at 0.5 "$ftp start"
