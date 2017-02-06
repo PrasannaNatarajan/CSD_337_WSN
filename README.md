@@ -13,3 +13,9 @@ Code is in lab3 folder
 
 ## TCP Reno congestion windows vs time graph
 ![Alt text](/lab4 - graded/reno.png "Lab4")
+
+
+###Resources:
+1. <a href = "/ns.pdf">ns.pdf</a>
+2. <a href = "http://www.isi.edu/nsnam/ns/tutorial/index.html"> isi tutorials</a>
+3. <a href = "http://nile.wpi.edu/NS/">nile tutorials </a>
