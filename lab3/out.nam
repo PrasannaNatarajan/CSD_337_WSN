@@ -6,15 +6,23 @@ c -t * -i 2 -n Red
 c -t * -i 3 -n Green
 n -t * -a 4 -s 4 -S UP -v circle -c black -i black
 n -t * -a 0 -s 0 -S UP -v circle -c black -i black
+n -t * -a 5 -s 5 -S UP -v circle -c black -i black
 n -t * -a 1 -s 1 -S UP -v circle -c black -i black
+n -t * -a 6 -s 6 -S UP -v circle -c black -i black
 n -t * -a 2 -s 2 -S UP -v circle -c black -i black
+n -t * -a 7 -s 7 -S UP -v circle -c black -i black
 n -t * -a 3 -s 3 -S UP -v circle -c black -i black
 l -t * -s 3 -d 0 -S UP -r 2000000 -D 0.0050000000000000001 -c black -o left-up
 l -t * -s 3 -d 2 -S UP -r 2000000 -D 0.0050000000000000001 -c black -o left-down
 l -t * -s 3 -d 1 -S UP -r 2000000 -D 0.0050000000000000001 -c black -o left
 l -t * -s 4 -d 3 -S UP -r 600000 -D 0.01 -c black -o left
-q -t * -s 4 -d 3 -a 0.5
+X -t * -n 8 -r 0.5Mb -D 40ms -o left
+L -t * -s 8 -d 4 -o up
+L -t * -s 8 -d 5 -o down
+L -t * -s 8 -d 6 -o up
+L -t * -s 8 -d 7 -o down
 q -t * -s 3 -d 4 -a 0.5
+q -t * -s 4 -d 3 -a 0.5
 + -t 0.5 -s 0 -d 3 -p tcp -e 40 -c 1 -i 0 -a 1 -x {0.0 4.0 0 ------- null}
 - -t 0.5 -s 0 -d 3 -p tcp -e 40 -c 1 -i 0 -a 1 -x {0.0 4.0 0 ------- null}
 h -t 0.5 -s 0 -d 3 -p tcp -e 40 -c 1 -i 0 -a 1 -x {0.0 4.0 -1 ------- null}
