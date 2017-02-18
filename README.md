@@ -15,10 +15,10 @@ Code is in lab3 folder
 ![Alt text](/lab4 - graded/reno.png "Lab4")
 
 ## Lab 5
-
+Upload it
 
 ## Lab 6
-
+Do it
 
 
 ###Resources:
