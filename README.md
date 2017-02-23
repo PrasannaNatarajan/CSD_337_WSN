@@ -15,10 +15,14 @@ Code is in lab3 folder
 ![Alt text](/lab4 - graded/reno.png "Lab4")
 
 ## Lab 5
-Upload it
+Implementation of wireless sensors
+Topology:
+![Alt text](/lab4 - graded/reno.png "Lab4")
+Graph: Number of drops vs Time
+![Alt text](/lab4 - graded/reno.png "Lab4")
 
 ## Lab 6
-Do it
+Matlab implementation of Leach protocol and plotting various graphs out of it.
 
 
 ###Resources:
