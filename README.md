@@ -33,4 +33,10 @@ Matlab implementation of Leach protocol and plotting various graphs out of it.
 ### Tool
 NSG2.1.jar: Is an awesome GUI tool written in java where the topology could me made and the tcl file can be generated.
 
+### Steps to use the tool:
+1. Open terminal
+2. cd path/to/NSG2.1.jar
+3. java -jar NSG2.1.jar
+
+If everything went well you should see a GUI prompt...
 All thanks to http://www.ns2blogger.in/2014/04/nsg-21-tcl-script-generator.html
