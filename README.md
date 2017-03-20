@@ -16,7 +16,7 @@ Code is in lab3 folder
 ![Alt text](/lab4 - graded/tahoe.png "Lab4")
 
 ## TCP Reno congestion windows vs time graph
-![Alt text](/lab4 - graded/reno.png "Lab4")
+![Alt text](/lab4 - graded/reno.png "Lab4 - reno")
 
 ## Lab 5
 Implementation of wireless sensors
