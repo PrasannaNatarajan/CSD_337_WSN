@@ -18,16 +18,16 @@ Code is in lab3 folder
 
 ## TCP Reno congestion windows vs time graph
 
-![Alt text](CSD_337_WSN/lab4 - graded/reno.png "Lab4 - reno")
+![Alt text](/lab4 - graded/reno.png)
 
-## Lab 5
+### Lab 5:
 Implementation of wireless sensors
 ## Topology:
 ![Alt text](/lab5/Topology.JPG "Lab5")
 ## Graph: Number of drops vs Time
 ![Alt text](/lab5/graph.JPG "Lab5")
 
-## Lab 6
+### Lab 6:
 Matlab implementation of Leach protocol and plotting various graphs out of it.
 
 
