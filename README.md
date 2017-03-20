@@ -18,7 +18,7 @@ Code is in lab3 folder
 
 ## TCP Reno congestion windows vs time graph
 
-![Alt text](/lab4 - graded/reno.png "Lab4 - reno")
+![Alt text](CSD_337_WSN/lab4 - graded/reno.png "Lab4 - reno")
 
 ## Lab 5
 Implementation of wireless sensors
