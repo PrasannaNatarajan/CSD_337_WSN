@@ -13,9 +13,11 @@ The second half of the semester was for implementing networks in hardware.
 Code is in lab3 folder
 
 ## TCP Tahoe congestion window vs time graph
+
 ![Alt text](/lab4 - graded/tahoe.png "Lab4")
 
 ## TCP Reno congestion windows vs time graph
+
 ![Alt text](/lab4 - graded/reno.png "Lab4 - reno")
 
 ## Lab 5
