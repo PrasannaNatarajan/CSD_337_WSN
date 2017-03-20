@@ -1,6 +1,8 @@
 # CSD_337_WSN
 Lab assignment for CSD 337: Wireless Sensor Networks
 
+The first half of the semester was for simulating the networks. The second half of the semester was for implementing networks in hardware.
+
 ### Lab2:
 
 ![Alt text](/lab2/WSN_lab2.png "Lab2")
