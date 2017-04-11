@@ -31,3 +31,46 @@ void ledISR(){
   delayMicroseconds(1000000);
 }
 
+
+
+/*
+ * if (serialAvailable())
+{
+  char led;
+
+  led = (char)serialRead();
+  led -= (char)'0';
+
+  if (led > -1 && led < THE_SIZE_OF_YOUR_PINARRAY)
+      digitalWrite(pinArray[led], HIGH);
+}
+
+
+
+void draw(){
+
+ if(keyPressed) {
+   if (key == '0') {
+     port.write ("0");
+   }
+   if (key == '1') {
+     port.write ("1");
+   }
+   if (key == '2') {
+     port.write ("2");
+   }
+   if (key == '3') {
+     port.write ("3");
+   }
+   if (key == '4') {
+     port.write ("4");
+   }
+   if (key == '5') {
+     port.write ("5");
+   }
+ } 
+ * 
+ * 
+ * /
+ */
+
