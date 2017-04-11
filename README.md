@@ -3,7 +3,7 @@ Lab assignment for CSD 337: Wireless Sensor Networks
 
 The first half of the semester was for simulating the networks. 
 
-The second half of the semester was for implementing networks in hardware.
+The second half of the semester was for learning to use sensors through arduino.
 
 ### Lab2:
 
