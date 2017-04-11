@@ -33,6 +33,11 @@ Matlab implementation of Leach protocol and plotting various graphs out of it.
 ### Lab 7-14:
 Deals with Arduino and Processing
 
+### Sensors used:
+1. PIR - Motion Sensor
+2. Temperature (LM35) Sensor
+3. LDR Sensor
+4. Sound Sensor
 
 ### Resources:
 1. <a href = "/ns.pdf">ns.pdf</a>
