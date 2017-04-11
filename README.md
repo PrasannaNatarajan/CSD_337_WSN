@@ -30,6 +30,9 @@ Implementation of wireless sensors
 ### Lab 6:
 Matlab implementation of Leach protocol and plotting various graphs out of it.
 
+### Lab 7-14:
+Deals with Arduino and Processing
+
 
 ### Resources:
 1. <a href = "/ns.pdf">ns.pdf</a>
