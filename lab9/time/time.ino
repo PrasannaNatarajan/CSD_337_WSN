@@ -27,5 +27,5 @@ void loop() {
   Serial.write(lightVal);
   delay(1000);
   
-}
 
+}
