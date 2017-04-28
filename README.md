@@ -3,7 +3,7 @@ Lab assignment for CSD 337: Wireless Sensor Networks
 
 The first half of the semester was for simulating the networks. 
 
-The second half of the semester was for implementing networks in hardware.
+The second half of the semester was for learning to use sensors through arduino.
 
 ### Lab2:
 
@@ -30,6 +30,14 @@ Implementation of wireless sensors
 ### Lab 6:
 Matlab implementation of Leach protocol and plotting various graphs out of it.
 
+### Lab 7-14:
+Deals with Arduino and Processing
+
+### Sensors used:
+1. PIR - Motion Sensor
+2. Temperature (LM35) Sensor
+3. LDR Sensor
+4. Sound Sensor
 
 ### Resources:
 1. <a href = "/ns.pdf">ns.pdf</a>
